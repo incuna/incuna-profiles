@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.admin.options import *
-from incuna.admin.order import OrderableAdmin
+from orderable.admin import OrderableAdmin
 from models import *
 
 class SeniorityGroupOptions(OrderableAdmin):

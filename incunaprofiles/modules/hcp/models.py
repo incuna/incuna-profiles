@@ -2,7 +2,7 @@ from django.db import models
 
 from django.utils.translation import ugettext_lazy as _
 from django.db import models
-from incuna.db.models import Orderable
+from orderable.models import Orderable
 
 
 class SeniorityGroup(Orderable):
