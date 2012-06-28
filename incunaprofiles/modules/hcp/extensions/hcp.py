@@ -2,7 +2,6 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from incuna.utils import find
 
-# s/\(\s*\)\([^ ]*\) = \(.*\)/\1cls.add_to_class('\2', \3)/
 def register(cls, admin_cls):
     cls.add_to_class('gmc_number', models.CharField(max_length=15, verbose_name=_('GMC/NMC Number'), null=True, blank=True))
     cls.add_to_class('seniority', models.ForeignKey('profiles.Seniority', null=True))
@@ -22,7 +21,8 @@ def register(cls, admin_cls):
                 at = fields.index('last_name') + 1
             except ValueError:
                 at = len(fields)
-            fields.insert(at, 'gmc_number')
+            fields[at:at] = ['gmc_number', 'speciality', 'sub_specialities']
+            admin_cls.filter_horizontal += ('sub_specialities',)
 
             address_title = _('Address')
 
