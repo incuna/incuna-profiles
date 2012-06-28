@@ -4,7 +4,7 @@ setup(
     name = "incuna-profiles",
     packages = find_packages(),
     include_package_data=True,
-    version = "0.1",
+    version = "0.2",
     description = "Incuna specific user profiles extensions.",
     author = "Incuna Ltd",
     author_email = "admin@incuna.com",
