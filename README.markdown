@@ -7,15 +7,8 @@ Install the package with your favourite package manager:
 
     pip install incunaprofiles
 
-Add `incunaprofiles` to your `INSTALLED_APPS`:
 
-    ...
-    'incunaprofiles',
-    ...
-
-
-## Extensions
-Two currently exist:
+Two extensions currently exist:
 * hcp
 * opportunities
 
@@ -27,7 +20,7 @@ In a `models.py` (usually the project one) add:
         'incunaprofiles.modules.opportunities.extension'
     )
 
-Make sure you add the relevant models to your `INSTALLED_APPS` *after* `incunaprofiles`:
+Make sure you add the relevant modules to your `INSTALLED_APPS`:
 
     ...
     'incunaprofiles.modules.hcp',
